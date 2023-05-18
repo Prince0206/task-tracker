@@ -86,7 +86,7 @@ function App() {
   }
 
   useEffect(() => {
-    fetch("http://localhost:3000/tasks")
+    fetch("https://flaxen-cut-dentist.glitch.me/tasks")
       .then((res) => res.json())
       .then((data) => {
         setState(data);
@@ -94,7 +94,7 @@ function App() {
   }, []);
 
   function addTask(item) {
-    fetch("http://localhost:3000/tasks", {
+    fetch("https://flaxen-cut-dentist.glitch.me/tasks", {
       method: "POST",
       headers: {
         Accept: "application/json",
@@ -110,7 +110,7 @@ function App() {
   }
 
   function deleteTask(id) {
-    fetch(`http://localhost:3000/tasks/${id}`, {
+    fetch(`https://flaxen-cut-dentist.glitch.me/tasks/${id}`, {
       method: "DELETE",
       headers: {
         Accept: "application/json",
@@ -126,7 +126,7 @@ function App() {
   }
 
  const getTask = (id) => {
-    fetch(`http://localhost:3000/tasks/${id}`)
+    fetch(`https://flaxen-cut-dentist.glitch.me/tasks/${id}`)
     .then(res=> res.json())
     .then (data => data)
 
@@ -178,7 +178,7 @@ function App() {
               key={item.id}
               id={item.id}
               data={item}
-              toggler={remToggle}
+              toggler={cardToggler}
               // tasks={tasks}
               del={deleteTask}
               // reminder={rem}
