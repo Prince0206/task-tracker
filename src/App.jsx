@@ -160,7 +160,7 @@ function App() {
 
   return (
     <div className="">
-      <div className="w-5/12 mx-auto bg-white h-screen">
+      <div className="sm:w-5/12 mx-auto bg-white h-screen">
         <Header />
         <Form
           handleChange={handleChange}
@@ -187,7 +187,7 @@ function App() {
         })}
       </div>
     </div>
-  );
+  )
 }
 
 export default App;
